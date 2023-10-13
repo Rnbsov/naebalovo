@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <div className='wrapper h-screen bg-background'>
-        <h1 className='text-4xl'>
+        <h1 className='text-4xl font-semibold'>
           Упс... У меня для вас плохие новости кажется вас наебали!
         </h1>
 
@@ -47,13 +47,13 @@ function App() {
         </div>
 
         <div className='flex items-center justify-center flex-col mt-6'>
-          <p>Если ещё остались вопросы</p>
+          <p className='font-normal hover:font-medium'>Если ещё остались вопросы</p>
 
           <a
             href='https://t.me/Rnbsov'
             target='_blank'
             rel='noreferrer'
-            className='mt-6'
+            className='mt-1'
           >
             <button className='mt-6 w-12 h-12 bg-gradient-to-tr from-cl1 to-cl2 flex justify-center items-center rounded-lg text-white p-1'>
               <ArrowDownToLine />
