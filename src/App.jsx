@@ -15,7 +15,7 @@ function App() {
           <div className='collapse collapse-arrow w-96 bg-lime-300'>
             <input type='radio' name='my-accordion-1' />
             <div className='collapse-title text-xl font-medium'>
-              Нажми сюда если ещё не поняли что произошло
+              Нажмите сюда если ещё не поняли что произошло
             </div>
             <div className='collapse-content text-6xl'>
               <p>Иди нахуй</p>
