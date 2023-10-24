@@ -1,10 +1,12 @@
 // import './App.css'
 
 import { ArrowDownToLine } from 'lucide-react'
+import { useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast'
 import { useConfetti } from './hooks/useConfetti'
 
 function App() {
+  const [arrowSpin, setArrowSpin] = useState(false)
 
   const handleConfetti = useConfetti()
   const handleMultipleConfetti = useConfetti(true)
@@ -82,6 +84,7 @@ function App() {
                 onClick={() => {
                   handleClick()
                   handleConfetti()
+                  setArrowSpin(true)
                 }}
                 className='btn btn-success mt-3'
               >
@@ -103,7 +106,7 @@ function App() {
             className='mt-2 animate-bounce'
           >
             <button className='mt-6 w-12 h-12 bg-gradient-to-tr from-cl1 to-cl2 flex justify-center items-center rounded-lg text-white p-1'>
-              <ArrowDownToLine />
+              <div className={arrowSpin ? 'animate-spin' : ''}><ArrowDownToLine /></div>
             </button>
           </a>
 
