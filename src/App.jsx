@@ -1,8 +1,36 @@
 // import './App.css'
 
 import { ArrowDownToLine } from 'lucide-react'
+import toast, { Toaster } from 'react-hot-toast'
 
 function App() {
+  const messages = ['Гандон', 'Гандониус']
+
+  const icons = ['🍃', '👾', '💚','💜','☄','🧡','✨','🦊','🦩','😭', '🐟']
+
+  const positions = [
+    'top-left',
+    'bottom-left',
+    'top-center',
+    'bottom-center',
+    'top-right',
+    'bottom-right',
+  ]
+
+  const handleClick = () => {
+    const randomMessage =
+      messages[Math.floor(Math.random() * messages.length)]
+    const randomPosition =
+      positions[Math.floor(Math.random() * positions.length)]
+    const randomIcons =
+      icons[Math.floor(Math.random() * icons.length)]
+
+    toast(randomMessage, {
+      icon: randomIcons,
+      position: randomPosition,
+    })
+  }
+
   return (
     <>
       <div className='wrapper h-screen bg-background'>
@@ -42,12 +70,23 @@ function App() {
             </div>
             <div className='collapse-content'>
               <p>Да иди ты нахуй!! Заебал гандон...</p>
+
+              <button
+                onClick={() => {
+                  handleClick()
+                }}
+                className='btn btn-success mt-3'
+              >
+                ❤ Click me!
+              </button>
             </div>
           </div>
         </div>
 
         <div className='flex items-center justify-center flex-col mt-6'>
-          <p className='font-normal hover:font-medium'>Если ещё остались вопросы</p>
+          <p className='font-normal hover:font-medium'>
+            Если ещё остались вопросы
+          </p>
 
           <a
             href='https://t.me/Rnbsov'
@@ -73,6 +112,7 @@ function App() {
           </a>
         </div>
       </div>
+      <Toaster />
     </>
   )
 }
