@@ -53,7 +53,7 @@ function App() {
             href='https://t.me/Rnbsov'
             target='_blank'
             rel='noreferrer'
-            className='mt-1'
+            className='mt-2 animate-bounce'
           >
             <button className='mt-6 w-12 h-12 bg-gradient-to-tr from-cl1 to-cl2 flex justify-center items-center rounded-lg text-white p-1'>
               <ArrowDownToLine />
