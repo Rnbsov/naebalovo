@@ -2,8 +2,12 @@
 
 import { ArrowDownToLine } from 'lucide-react'
 import toast, { Toaster } from 'react-hot-toast'
+import { useConfetti } from './hooks/useConfetti'
 
 function App() {
+
+  const handleConfetti = useConfetti()
+  
   const messages = ['Гандон', 'Гандониус', 'Пидр', 'Пидр гнойный', 'homo-sexualis', 'Ну здорова, пидр!', 'Гомосек']
 
   const icons = ['🍃', '👾', '💚','💜','☄','🧡','✨','🦊','🦩','😭', '🐟']
@@ -39,7 +43,7 @@ function App() {
         </h1>
 
         {/* Accordion */}
-        <div className='flex items-center justify-center mt-24'>
+        <div onClick={handleConfetti} className='flex items-center justify-center mt-24'>
           <div className='collapse collapse-arrow w-96 bg-lime-300'>
             <input type='radio' name='my-accordion-1' />
             <div className='collapse-title text-xl font-medium'>
@@ -50,7 +54,8 @@ function App() {
             </div>
           </div>
         </div>
-        <div className='flex items-center justify-center mt-5'>
+
+        <div onClick={handleConfetti} className='flex items-center justify-center mt-5'>
           <div className='collapse collapse-arrow w-96 bg-lime-300'>
             <input type='radio' name='my-accordion-1' />
             <div className='collapse-title text-xl font-medium'>
@@ -62,7 +67,7 @@ function App() {
           </div>
         </div>
 
-        <div className='flex items-center justify-center mt-5'>
+        <div onClick={handleConfetti} className='flex items-center justify-center mt-5'>
           <div className='collapse collapse-arrow w-96 bg-lime-300'>
             <input type='radio' name='my-accordion-1' />
             <div className='collapse-title text-xl font-medium'>
@@ -74,6 +79,7 @@ function App() {
               <button
                 onClick={() => {
                   handleClick()
+                  handleConfetti()
                 }}
                 className='btn btn-success mt-3'
               >
@@ -84,7 +90,7 @@ function App() {
         </div>
 
         <div className='flex items-center justify-center flex-col mt-6'>
-          <p className='font-normal hover:font-medium'>
+          <p onClick={handleConfetti} className='font-normal hover:font-medium'>
             Если ещё остались вопросы
           </p>
 
