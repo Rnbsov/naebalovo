@@ -4,7 +4,7 @@ import { ArrowDownToLine } from 'lucide-react'
 import toast, { Toaster } from 'react-hot-toast'
 
 function App() {
-  const messages = ['Гандон', 'Гандониус']
+  const messages = ['Гандон', 'Гандониус', 'Пидр', 'Пидр гнойный', 'homo-sexualis', 'Ну здорова, пидр!', 'Гомосек']
 
   const icons = ['🍃', '👾', '💚','💜','☄','🧡','✨','🦊','🦩','😭', '🐟']
 
