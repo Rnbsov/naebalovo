@@ -7,6 +7,7 @@ import { useConfetti } from './hooks/useConfetti'
 function App() {
 
   const handleConfetti = useConfetti()
+  const handleMultipleConfetti = useConfetti(true)
   
   const messages = ['Гандон', 'Гандониус', 'Пидр', 'Пидр гнойный', 'homo-sexualis', 'Ну здорова, пидр!', 'Гомосек']
 
@@ -90,7 +91,7 @@ function App() {
         </div>
 
         <div className='flex items-center justify-center flex-col mt-6'>
-          <p onClick={handleConfetti} className='font-normal hover:font-medium'>
+          <p onClick={handleMultipleConfetti} className='font-normal hover:font-medium'>
             Если ещё остались вопросы
           </p>
 
