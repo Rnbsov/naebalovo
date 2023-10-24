@@ -91,7 +91,7 @@ function App() {
         </div>
 
         <div className='flex items-center justify-center flex-col mt-6'>
-          <p onClick={handleMultipleConfetti} className='font-normal hover:font-medium'>
+          <p onClick={handleMultipleConfetti} className='font-normal hover:font-medium sele cursor-pointer select-none'>
             Если ещё остались вопросы
           </p>
 
