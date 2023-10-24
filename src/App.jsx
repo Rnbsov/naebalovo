@@ -33,6 +33,7 @@ function App() {
     toast(randomMessage, {
       icon: randomIcons,
       position: randomPosition,
+      duration: 2000
     })
   }
 
